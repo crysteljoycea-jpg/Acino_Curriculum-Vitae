@@ -1,0 +1,16 @@
+# Personal CV Website
+
+## Student Information
+- Name: Crystel Joyce Acino
+- Year Level: 4th Year
+- Set/Section: BSIT 4-G
+- Subject: APPLICATION DEVELOPMENT AND EMERGING TECHNOLOGIES
+
+## About This Project
+This repository contains a simple, responsive personal Curriculum Vitae (CV)
+web page built with HTML, CSS, and JavaScript.
+
+## Files
+- `index.html` — main CV page
+- `styles.css` — styling (responsive, with light/dark theme toggle)
+- `script.js` — interactivity (theme toggle, small animations)

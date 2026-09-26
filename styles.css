@@ -1,0 +1,283 @@
+:root {
+  --bg: #05050a;
+  --card: #101018;
+  --card-edge: #1c1c28;
+  --text: #f3f4f8;
+  --muted: #9a9aab;
+  --accent: #3aa9ff;
+  --accent-soft: rgba(58, 169, 255, 0.15);
+  --pink: #ff6fb1;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+}
+
+.resume-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 28px;
+  padding: 2.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.intro h1 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.photo-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.blob {
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--pink), transparent 60%),
+              radial-gradient(circle at 70% 70%, var(--accent), transparent 60%);
+  filter: blur(6px);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.avatar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 4px solid var(--card);
+  display: block;
+}
+
+.pill-section {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--card-edge);
+  border-radius: 20px;
+  padding: 2rem 1.4rem 1.4rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.pill {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #06121c;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.45rem 1.4rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pill-section p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.edu-cols, .exp-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.edu-cols h3, .exp-cols h3 {
+  margin: 0.2rem 0 0.2rem;
+  font-size: 0.95rem;
+}
+
+.edu-cols p, .exp-cols p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: left;
+}
+
+.year-range {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.achv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.achv-list li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.achv-list h4 {
+  margin: 0 0 0.15rem;
+  font-size: 0.9rem;
+}
+
+.achv-list p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: left;
+}
+
+.medal {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.skills-ring-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.ring {
+  position: relative;
+  width: 92px;
+  height: 92px;
+}
+
+.ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ring circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.ring .track {
+  stroke: var(--accent-soft);
+}
+
+.ring .fill {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-dasharray: 264;
+  stroke-dashoffset: calc(264 - (264 * var(--p)) / 100);
+  transition: stroke-dashoffset 1.2s ease;
+}
+
+.ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-list a:hover { text-decoration: underline; }
+
+footer {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .top { flex-direction: column; text-align: center; }
+  .contact-row { align-items: center; }
+  .two-col, .edu-cols, .exp-cols { grid-template-columns: 1fr; }
+  .resume-card { padding: 1.6rem; }
+}
