@@ -118,3 +118,15 @@ body,.site-header,.career,.work-section,.project-card,.skill-group,.chat-panel,.
 :root[data-theme="dark"] .theme-icon{transform:rotate(180deg)}
 .button{transition:transform .2s,background .2s,color .2s}
 @media(prefers-reduced-motion:reduce){.theme-icon{transition:none}}
+/* Use the supplied screenshots in both project cards. */
+.project-art .project-image{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .55s ease}
+.project-card:hover .project-art .project-image{transform:scale(1.035)}
+.project-image-label{position:absolute;z-index:2;left:15px;bottom:14px;padding:6px 9px;background:rgba(20,37,27,.8);color:#f4f6ef;font:8px var(--mono);letter-spacing:.6px}
+.portfolio-preview{min-height:265px;gap:0;padding:14px;background:#d9e1dd}
+.portfolio-preview .project-image{position:relative;inset:auto;width:auto;height:224px;max-width:100%;object-fit:contain;object-position:top;border:3px solid #263f34;border-radius:5px;box-shadow:0 14px 28px rgba(24,40,29,.22);transition:transform .35s ease}
+.portfolio-preview>span{position:absolute;z-index:2;left:14px;bottom:12px;padding:5px 8px;background:rgba(247,247,243,.92);font:8px var(--mono);letter-spacing:.6px;color:#536c5c}
+.project-card:hover .portfolio-preview .project-image{transform:translateY(-3px)}
+:root[data-theme="dark"] .portfolio-preview{background:#202c24}
+:root[data-theme="dark"] .portfolio-preview>span{background:rgba(17,23,19,.92);color:#c2d3ba}
+@media(max-width:600px){.project-art .project-image{object-fit:cover}.portfolio-preview{min-height:255px}.portfolio-preview .project-image{height:210px}}
+@media(prefers-reduced-motion:reduce){.project-art .project-image,.portfolio-preview .project-image{transition:none}}

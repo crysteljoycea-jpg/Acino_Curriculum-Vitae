@@ -35,5 +35,5 @@ Open `index.html` in a browser, or serve this directory with any static web serv
 index.html       Page structure and CV content
 styles.css       Visual design and responsive styles
 script.js        Scroll reveals and current year
-pic/             Profile photo
+pic/             Profile photo and project screenshots
 ```
