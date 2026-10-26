@@ -1,12 +1,14 @@
-# Crystel Joyce S. Acino — Portfolio & CV
+# Crystel Joyce Acino — Portfolio & CV
 
-A responsive personal portfolio and curriculum vitae for Crystel Joyce S. Acino, a fourth-year Bachelor of Science in Information Technology student. The site presents her background, career objective, education, selected projects, technical interests, and contact links.
+A responsive personal portfolio and curriculum vitae for Crystel Joyce Acino, a fourth-year Bachelor of Science in Information Technology student. The site presents her background, career objective, education, selected projects, technical interests, and contact links.
 
 The on-page CV assistant answers common questions about the information on the site. It runs in the browser and does not send visitors’ messages to a chat service.
 
+The interface includes persistent light and dark themes, a responsive CJA monogram wordmark, and motion preferences that respect reduced-motion settings.
+
 ## Student information
 
-- **Name:** Crystel Joyce S. Acino
+- **Name:** Crystel Joyce Acino
 - **Program:** BSIT 4-G, Davao del Norte State College
 - **Location:** Panabo City, Davao del Norte, Philippines
 

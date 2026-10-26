@@ -65,3 +65,56 @@
 .chat-footnote{margin:9px 0 11px;text-align:center;color:#8a8e85;font:8px var(--mono)}
 @media(max-width:600px){.chat-launcher{right:16px;bottom:16px;padding:11px 14px}.chat-panel{right:12px;bottom:72px;width:calc(100vw - 24px);height:min(500px,calc(100dvh - 90px));min-height:340px}.chat-messages{padding:14px 12px}}
 @media(prefers-reduced-motion:reduce){.chat-panel{animation:none}.chat-launcher{transition:none}}
+/* Dark theme and theme control. */
+.theme-toggle{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:500 10px var(--sans);cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.theme-toggle:hover{background:rgba(49,95,76,.08);border-color:#aebcaf;transform:translateY(-1px)}
+.theme-icon{font-size:14px;line-height:1}
+.header-actions{display:flex;align-items:center;gap:15px}
+body,.site-header,.career,.work-section,.project-card,.skill-group,.chat-panel,.chat-form,.portrait-frame{transition:background-color .3s ease,color .3s ease,border-color .3s ease}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#111713;--ink:#edf1e9;--muted:#b5beb2;--line:#303a32;--green:#a8c49b;--lime:#d4e8a0}
+:root[data-theme="dark"] body{background:#111713;color:var(--ink)}
+:root[data-theme="dark"] .site-header{background:rgba(17,23,19,.95);border-color:#303a32}
+:root[data-theme="dark"] .brand-mark{border-color:#879486}
+:root[data-theme="dark"] .header-contact{border-color:#758276}
+:root[data-theme="dark"] .theme-toggle{border-color:#4b5b4c;color:#edf1e9}
+:root[data-theme="dark"] .theme-toggle:hover{background:#27352a;border-color:#8aa184}
+:root[data-theme="dark"] .overline,:root[data-theme="dark"] .section-kicker,:root[data-theme="dark"] .item-type{color:#aab5a7}
+:root[data-theme="dark"] .hero-summary,:root[data-theme="dark"] .intro-text,:root[data-theme="dark"] .heading-note,:root[data-theme="dark"] .timeline-date,:root[data-theme="dark"] .timeline-body>p:last-child,:root[data-theme="dark"] .project-info>p,:root[data-theme="dark"] .skill-group p{color:#b7c0b4}
+:root[data-theme="dark"] .career{background:#202d24}
+:root[data-theme="dark"] .career>p{color:#e0e7dc}
+:root[data-theme="dark"] .timeline-marker{background:#a8c49b;box-shadow:0 0 0 4px #a8c49b22}
+:root[data-theme="dark"] .work-section{background:#171e19}
+:root[data-theme="dark"] .project-topline,:root[data-theme="dark"] .project-footer{color:#aab4a8}
+:root[data-theme="dark"] .tech-list span{border-color:#39443a;color:#c2ccbd}
+:root[data-theme="dark"] .project-placeholder{background:#202c24;color:#bdd0b6}
+:root[data-theme="dark"] .placeholder-code{color:#c6d7bd}
+:root[data-theme="dark"] .placeholder-grid{background-image:linear-gradient(#c3d1c012 1px,transparent 1px),linear-gradient(90deg,#c3d1c012 1px,transparent 1px)}
+:root[data-theme="dark"] .site-footer{color:#aab4a8}
+:root[data-theme="dark"] .site-footer .brand{color:var(--ink)}
+:root[data-theme="dark"] .site-footer>a:last-child{color:#c0cabc}
+:root[data-theme="dark"] .chat-panel{background:#171e19;border-color:#3c493d}
+:root[data-theme="dark"] .chat-header{background:#263f34}
+:root[data-theme="dark"] .chat-message.bot-message{background:#27332a;color:#e5ebe1}
+:root[data-theme="dark"] .chat-suggestions button{border-color:#435243;color:#d5e3d0}
+:root[data-theme="dark"] .chat-suggestions button:hover{background:#27352a;border-color:#70856d}
+:root[data-theme="dark"] .chat-form{background:#111713;border-color:#465347}
+:root[data-theme="dark"] .chat-form input{color:#edf1e9}
+:root[data-theme="dark"] .chat-form input::placeholder{color:#9ba698}
+:root[data-theme="dark"] .chat-footnote{color:#a0aa9d}
+:root[data-theme="dark"] .chat-launcher,:root[data-theme="dark"] .chat-form button{background:#315f4c;color:#fff}
+:root[data-theme="dark"] .chat-launcher:hover,:root[data-theme="dark"] .chat-form button:hover{background:#3e7259}
+:root[data-theme="dark"] .contact-section{background:#1d3328}
+@media(max-width:800px){.header-actions{gap:9px}.theme-toggle{padding:6px 8px}}
+@media(max-width:600px){.header-actions{grid-column:2;grid-row:1;gap:7px}.theme-toggle{font-size:9px;padding:6px 7px}.header-contact{font-size:9px}.theme-icon{font-size:13px}}
+@media(prefers-reduced-motion:reduce){body,.site-header,.career,.work-section,.project-card,.skill-group,.chat-panel,.chat-form,.portrait-frame,.theme-toggle{transition:none}}
+/* Full-name wordmark and CJA monogram. */
+.brand{white-space:nowrap}
+.brand-mark{display:block;width:36px;height:36px;flex:0 0 36px;border:0;border-radius:0;overflow:visible;letter-spacing:normal}
+.site-footer .brand-mark{width:32px;height:32px;flex-basis:32px;font-size:initial}
+@media(max-width:600px){.brand{gap:7px;font-size:11px}.brand-mark{width:32px;height:32px;flex-basis:32px}}
+@media(max-width:380px){.theme-label{display:none}.theme-toggle{padding-inline:7px}.brand{font-size:10px}.brand-mark{width:29px;height:29px;flex-basis:29px}}:root[data-theme="dark"] .button-dark{background:#dce5d6;color:#172019}
+:root[data-theme="dark"] .button-dark:hover{background:#c6db8c;color:#172019}
+.theme-icon{display:inline-block;transition:transform .35s ease}
+:root[data-theme="dark"] .theme-icon{transform:rotate(180deg)}
+.button{transition:transform .2s,background .2s,color .2s}
+@media(prefers-reduced-motion:reduce){.theme-icon{transition:none}}
