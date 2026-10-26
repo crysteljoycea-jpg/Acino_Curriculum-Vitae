@@ -1,35 +1,19 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const toggleBtn = document.getElementById('theme-toggle');
-const root = document.documentElement;
+const revealItems = document.querySelectorAll('.reveal');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function applyTheme(theme) {
-  if (theme === 'light') {
-    root.setAttribute('data-theme', 'light');
-    toggleBtn.textContent = '☀️';
-  } else {
-    root.removeAttribute('data-theme');
-    toggleBtn.textContent = '🌙';
-  }
-  localStorage.setItem('cv-theme', theme);
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
 }
-
-const saved = localStorage.getItem('cv-theme') || 'dark';
-applyTheme(saved);
-
-toggleBtn.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  applyTheme(current === 'light' ? 'dark' : 'light');
-});
-
-// Animate skill bars once they're on screen
-const skillFills = document.querySelectorAll('.skill-fill');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.width = entry.target.style.width; // trigger transition
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-skillFills.forEach(el => observer.observe(el));
