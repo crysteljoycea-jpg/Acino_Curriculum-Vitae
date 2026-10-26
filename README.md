@@ -2,6 +2,8 @@
 
 A responsive personal portfolio and curriculum vitae for Crystel Joyce S. Acino, a fourth-year Bachelor of Science in Information Technology student. The site presents her background, career objective, education, selected projects, technical interests, and contact links.
 
+The on-page CV assistant answers common questions about the information on the site. It runs in the browser and does not send visitors’ messages to a chat service.
+
 ## Student information
 
 - **Name:** Crystel Joyce S. Acino
